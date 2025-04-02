@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI; // Uncomment this if using environment variables
 
-const MONGO_URI = "mongodb://127.0.0.1:27017/moodyflix"; // Change if using cloud DB
+// const MONGO_URI = "mongodb://127.0.0.1:27017/moodyflix"; // Change if using cloud DB
 
 const connectDB = async () => {
   try {
