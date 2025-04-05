@@ -6,6 +6,7 @@ const trandings = require('../models/trendings'); // Import Trending model
 const mystoryModel = require('../models/mystoryModel'); // Import MyStory model
 const thrillerModel = require('../models/thrillerModel'); // Import Thriller model
 const topRatedModel = require('../models/topRatedModel'); // Import TopRated model
+const bollywoodModel = require('../models/BollywoodModel'); // Import Bollywood model
 const cors = require('cors');
 
 const router = express.Router();
@@ -45,6 +46,17 @@ router.get('/toprated', async (req, res) => {
 router.get('/thriller', async (req, res) => {
     try {
         const trendingMovies = await thrillerModel.find(); // Trending collection se fetch
+        if (trendingMovies.length === 0) {
+            return res.status(404).json({ message: "No trending movies found" });
+        }
+        res.status(200).json({ movies: trendingMovies });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+router.get('/bollywood', async (req, res) => {
+    try {
+        const trendingMovies = await bollywoodModel.find(); // Trending collection se fetch
         if (trendingMovies.length === 0) {
             return res.status(404).json({ message: "No trending movies found" });
         }
