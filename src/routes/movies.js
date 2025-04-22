@@ -24,7 +24,8 @@ const models = {
  UserFavorites: getModelByCollection('UserFavorites'),
  HorrorNight: getModelByCollection('Horrornight'),
 Recommended: getModelByCollection('Recommended'),
-massmania: getModelByCollection('massmania')
+massmania: getModelByCollection('massmania'),
+massmania2: getModelByCollection('massmania2')
 
   
 };
