@@ -27,7 +27,9 @@ Recommended: getModelByCollection('Recommended'),
 massmania: getModelByCollection('massmania'),
 massmania2: getModelByCollection('massmania2'),
 massmania3: getModelByCollection('massmania3'),
-massmania4: getModelByCollection('massmania4')
+massmania4: getModelByCollection('massmania4'),
+topglobal: getModelByCollection('topglobal'),
+topindia: getModelByCollection('topindia'),
 
   
 };
